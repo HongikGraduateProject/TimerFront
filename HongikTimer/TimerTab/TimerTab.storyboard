@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KIJ-Zs-2PO">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Timer Tab-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="TimerTab" customModule="HongikTimer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="06 : 34" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yng-Y5-HzL">
+                                <rect key="frame" x="94" y="103" width="226" height="88.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="74"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile1" translatesAutoresizingMaskIntoConstraints="NO" id="A82-wY-Tt9">
+                                <rect key="frame" x="107" y="211.5" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="Agw-a0-h0g"/>
+                                    <constraint firstAttribute="width" constant="200" id="hiy-ss-KoH"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="누적 코인 : 23" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lhw-m1-uvD">
+                                <rect key="frame" x="80.5" y="441.5" width="253" height="55"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="46"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MEc-aq-72c">
+                                <rect key="frame" x="132" y="528" width="150" height="146.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="4Zf-iZ-Ndj"/>
+                                    <constraint firstAttribute="width" constant="150" id="Mhm-S6-iTj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <color key="tintColor" red="0.47537900430000002" green="0.78039215689999997" blue="0.50073174180000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Start" backgroundImage="play.fill" catalog="system">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Lhw-m1-uvD" firstAttribute="top" secondItem="A82-wY-Tt9" secondAttribute="bottom" constant="30" id="68O-2W-3vI"/>
+                            <constraint firstItem="yng-Y5-HzL" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="8dz-5i-718"/>
+                            <constraint firstItem="MEc-aq-72c" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="LBR-Qz-mph"/>
+                            <constraint firstItem="MEc-aq-72c" firstAttribute="top" secondItem="Lhw-m1-uvD" secondAttribute="bottom" constant="30" id="PGO-Gv-iGO"/>
+                            <constraint firstItem="A82-wY-Tt9" firstAttribute="top" secondItem="yng-Y5-HzL" secondAttribute="bottom" constant="20" id="fbS-H2-hZf"/>
+                            <constraint firstItem="Lhw-m1-uvD" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="hpC-mB-6P3"/>
+                            <constraint firstItem="yng-Y5-HzL" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="15" id="psQ-fP-ECY"/>
+                            <constraint firstItem="A82-wY-Tt9" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="xZp-8M-Qi1"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="4ry-3v-X8b"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1110.144927536232" y="32.8125"/>
+        </scene>
+        <!--Timer-->
+        <scene sceneID="PpH-aW-oM2">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KIJ-Zs-2PO" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Timer" image="clock" catalog="system" id="iuR-Ey-7rS"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sN4-uw-wLh">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="dIY-zG-GTq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QfA-mE-JNA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="200.00000000000003" y="32.8125"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="clock" catalog="system" width="128" height="121"/>
+        <image name="play.fill" catalog="system" width="116" height="128"/>
+        <image name="profile1" width="826" height="674"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
