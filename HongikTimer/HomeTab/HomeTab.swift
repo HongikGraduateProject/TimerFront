@@ -7,86 +7,131 @@
 
 import UIKit
 
-class HomeTab: UIViewController {
+class HomeTab: UIViewController, SettingPurposeDelegate, EditHomeDelegate {
+
     
+
     
+
     
-    @IBOutlet weak var HomeTabTableView: UITableView!
+    @IBOutlet var btnSpeechBubble: UIButton!
+    @IBOutlet var pvTimeGraph: UIProgressView!
+    @IBOutlet var imageViewWallPaper: UIImageView!
+    var purpose1: String = "홍익대학교 23학번!"
+    var home1: String = ""
+    var wallPaper1: String = ""
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        HomeTabTableView.delegate = self
-        HomeTabTableView.dataSource = self
-        HomeTabTableView.backgroundColor = UIColor(white: 245/255, alpha: 1)
-        
-        HomeTabTableView.register(UINib(nibName: "SimpleProfileCell", bundle: nil), forCellReuseIdentifier: "SimpleProfileCell")
-        HomeTabTableView.register(UINib(nibName: "DetailProfileCell", bundle: nil), forCellReuseIdentifier: "DetailProfileCell")
+        setTimeGraph()
+        settingWallpaper()
         
     }
     
-    
-}
-
-
-extension HomeTab: UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        setSpeechBubble()
     }
     
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
-    }
-
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        tableView.deselectRow(at: indexPath, animated: true)
-        
+    func setSpeechBubble() {
+        btnSpeechBubble.layer.zPosition = 300
+        btnSpeechBubble.setTitle(purpose1, for: .normal)
+        btnSpeechBubble.setTitleColor(.black, for: .normal)
+        btnSpeechBubble.titleLabel?.font = .systemFont(ofSize: 15)
     }
     
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        let setPurpose = segue.destination as! SetPurpose
+//        let editHome = segue.destination as! EditHome
+//        setPurpose.delegatePurpose = self
+//        editHome.delegateEdit = self
+//    }
+    
+    @IBAction func btnSetPurpose(_ sender: Any) {
 
+        guard let setPurpose = self
+            .storyboard?
+            .instantiateViewController(withIdentifier: "SetPurpose") as? SetPurpose else { return }
+        self.show(setPurpose, sender: setPurpose)
+//        self.present(setPurpose, animated: true)
+        setPurpose.delegatePurpose = self
+    }
+    
+    
+    
+    
+    
+    func editHome(home: String) {
+        home1 = home
+    }
+    
+    func editwallPaper(wallPaper: String) {
+        wallPaper1 = wallPaper
+    }
+    
+    func settingPurpose(purpose: String) {
+        purpose1 = purpose
+    }
+    
+    
 
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        if indexPath.section == 0 {
-            
-            let cell = tableView.dequeueReusableCell(withIdentifier: "SimpleProfileCell", for: indexPath) as! SimpleProfileCell
-            
-            
-            return cell
-            
-        } else  {
-            
-            let cell = tableView.dequeueReusableCell(withIdentifier: "DetailProfileCell", for: indexPath) as! DetailProfileCell
-            
-            return cell
-            
+    // 시간에 따라 배경 변경
+    func settingWallpaper() {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "HH"
+        let currentHour = formatter.string(from: Date())
+        if (17 <= Int(currentHour)! && Int(currentHour)! <= 23) || ( 0 <= Int(currentHour)! && Int(currentHour)! <= 6) {
+            imageViewWallPaper.image = UIImage(named: "w1")
+        } else {
+            imageViewWallPaper.image = UIImage(named: "w2")
         }
     }
+    
+    func editHomeImage() {
+        
+    }
+    
+    func setTimeGraph() {
+        pvTimeGraph.progressViewStyle = .default
+        pvTimeGraph.progressTintColor = UIColor(rgb: 0x75b53c)
+        pvTimeGraph.clipsToBounds = true
+        pvTimeGraph.layer.cornerRadius = 5
+        pvTimeGraph.clipsToBounds = true
+        pvTimeGraph.layer.sublayers![1].cornerRadius = 5
+        pvTimeGraph.subviews[1].clipsToBounds = true
+    }
+    
 }
 
 
-
-
-
-
-
-//// 첫 section
-//if indexPath.section == 0 {
-//
-//    // UITableViewCell -> ProfileCell로 typecasting해줘야함
-//    let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileCell", for: indexPath) as! ProfileCell
-//
-//    cell.topTitle.text = settingModel[indexPath.section][indexPath.row].menuTitle
-//
-//    cell.profileImageView.image = UIImage(systemName: settingModel[indexPath.section][indexPath.row].leftImageName)
-//    cell.bottomDescription.text = settingModel[indexPath.section][indexPath.row].subTitle
-//
-//    return cell
-//}
-
-
+extension UIColor {
+    convenience init(red: Int, green: Int, blue: Int, a: Int = 0xFF) {
+        self.init(
+            red: CGFloat(red) / 255.0,
+            green: CGFloat(green) / 255.0,
+            blue: CGFloat(blue) / 255.0,
+            alpha: CGFloat(a) / 255.0
+        )
+    }
+    convenience init(rgb: Int) {
+           self.init(
+               red: (rgb >> 16) & 0xFF,
+               green: (rgb >> 8) & 0xFF,
+               blue: rgb & 0xFF
+           )
+       }
+    // let's suppose alpha is the first component (ARGB)
+    convenience init(argb: Int) {
+        self.init(
+            red: (argb >> 16) & 0xFF,
+            green: (argb >> 8) & 0xFF,
+            blue: argb & 0xFF,
+            a: (argb >> 24) & 0xFF
+        )
+    }
+}
 

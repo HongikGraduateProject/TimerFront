@@ -16,7 +16,6 @@ class SimpleProfileCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        let profileHeight: Int = 60;
 //        profileImageView.layer.cornerRadius = CGFloat(profileHeight / 2)
 //        profileImageView.image = UIImage(named: "profile1")
         
@@ -26,7 +25,7 @@ class SimpleProfileCell: UITableViewCell {
         
         purposeLabel.textColor = .black
         purposeLabel.font = UIFont.systemFont(ofSize: 16)
-        purposeLabel.text = "홍익대학교 23학번 입학!!"
+        purposeLabel.text = ""
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

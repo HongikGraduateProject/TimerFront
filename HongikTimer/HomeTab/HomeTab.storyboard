@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OZW-1O-d5V">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Home-->
+        <!--Home Tab-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController id="Y6W-OH-hqX" customClass="HomeTab" customModule="HongikTimer" customModuleProvider="target" sceneMemberID="viewController">
@@ -16,33 +16,110 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="30" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="nWx-at-hcp">
-                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </tableView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="w5" translatesAutoresizingMaskIntoConstraints="NO" id="5ci-tt-a30">
+                                <rect key="frame" x="0.0" y="138" width="414" height="400"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="STA-iZ-LSL"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HsM-Oi-aaH">
+                                <rect key="frame" x="95" y="263" width="173" height="149"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="Home_ex1"/>
+                                <connections>
+                                    <segue destination="wpa-3Y-cbi" kind="show" id="cHJ-cz-AOr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0GB-GZ-2YG">
+                                <rect key="frame" x="114" y="154" width="280" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button" backgroundImage="speechBubble"/>
+                                <connections>
+                                    <action selector="btnSetPurpose:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="mgb-e8-mwP"/>
+                                </connections>
+                            </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="KN6-hv-c5R">
+                                <rect key="frame" x="40" y="638" width="334" height="4"/>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="진행시간" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kLf-so-h5p">
+                                <rect key="frame" x="40" y="613" width="59" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="nWx-at-hcp" secondAttribute="trailing" id="7mn-PD-lbY"/>
-                            <constraint firstItem="nWx-at-hcp" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="NYU-d4-idN"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="nWx-at-hcp" secondAttribute="bottom" id="Oz1-Bw-OGb"/>
-                            <constraint firstItem="nWx-at-hcp" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="jh2-Lq-97a"/>
+                            <constraint firstItem="5ci-tt-a30" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="50" id="3C9-Na-bKJ"/>
+                            <constraint firstItem="kLf-so-h5p" firstAttribute="top" secondItem="5ci-tt-a30" secondAttribute="bottom" constant="75" id="4W6-6J-cM5"/>
+                            <constraint firstItem="5ci-tt-a30" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="KBa-DM-CrR"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="5ci-tt-a30" secondAttribute="trailing" id="KsI-AF-0Gh"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="KN6-hv-c5R" secondAttribute="trailing" constant="40" id="ZEG-1g-E4M"/>
+                            <constraint firstItem="kLf-so-h5p" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="40" id="ZPb-pt-Lo9"/>
+                            <constraint firstItem="KN6-hv-c5R" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="40" id="g3q-ls-cwh"/>
+                            <constraint firstItem="KN6-hv-c5R" firstAttribute="top" secondItem="5ci-tt-a30" secondAttribute="bottom" constant="100" id="u2I-rQ-KDb"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="HVU-XQ-pEc"/>
+                    <navigationItem key="navigationItem" id="uDq-bq-DDH"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="HomeTabTableView" destination="nWx-at-hcp" id="odY-Y3-6dR"/>
+                        <outlet property="btnSpeechBubble" destination="0GB-GZ-2YG" id="XV1-mi-3YB"/>
+                        <outlet property="imageViewWallPaper" destination="5ci-tt-a30" id="Fc9-gC-bHw"/>
+                        <outlet property="pvTimeGraph" destination="KN6-hv-c5R" id="bCr-ee-eJd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-167" y="5"/>
+            <point key="canvasLocation" x="1079.7101449275362" y="-127.23214285714285"/>
+        </scene>
+        <!--EditHome-->
+        <scene sceneID="dxc-Ls-Rpi">
+            <objects>
+                <viewControllerPlaceholder storyboardName="EditHome" referencedIdentifier="EditHome" id="wpa-3Y-cbi" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="mp8-Cc-g4g"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bPt-U5-ol8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1731" y="15"/>
+        </scene>
+        <!--SetPurpose-->
+        <scene sceneID="dhU-aC-3eR">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="SetPurpose" storyboardName="SetPurpose" referencedIdentifier="SetPurpose" id="MCx-As-XVu" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="hQ0-Yd-50r"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SCy-l1-vYu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1756" y="-353"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="mub-Ol-IDN">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OZW-1O-d5V" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="HVU-XQ-pEc"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="siY-tU-M8b">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="nAK-C1-RH7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hMd-Vk-R41" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-36.231884057971016" y="-48.214285714285715"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Home_ex1" width="1226" height="992"/>
         <image name="house" catalog="system" width="128" height="106"/>
+        <image name="speechBubble" width="200" height="134"/>
+        <image name="w5" width="768" height="766"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

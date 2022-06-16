@@ -1,49 +1,28 @@
 
 import UIKit
 
-protocol SettingPurposeDelegate {
-    func settingPurpose(purpose: String)
-}
 
-class HomeCell: UITableViewCell, SettingPurposeDelegate {
+class HomeCell: UITableViewCell {
     
     
     @IBOutlet var imageViewHome: UIImageView!
     @IBOutlet var imageViewWallPaper: UIImageView!
-    @IBOutlet var btnSpeechBubble: UIButton!
+
     
     var purposeTxt = ""
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        btnSpeechBubble.layer.zPosition = 30
         imageViewHome.image = UIImage(named: "Home_ex1")
-        settingWallpaper()
-        btnSpeechBubble.setTitle("홍익대학교 22학번 합격!", for: .normal)
-        btnSpeechBubble.setTitleColor(.black, for: .normal)
-        btnSpeechBubble.titleLabel?.font = .systemFont(ofSize: 20)
     }
 
-    
-    
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
     }
     
-    // 시간에 따라 배경 변경
-    func settingWallpaper() {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "HH"
-        let currentHour = formatter.string(from: Date())
-        if (17 <= Int(currentHour)! && Int(currentHour)! <= 23) || ( 0 <= Int(currentHour)! && Int(currentHour)! <= 6) {
-            imageViewWallPaper.image = UIImage(named: "w1")
-        } else {
-            imageViewWallPaper.image = UIImage(named: "w2")
-        }
-    }
     
     
     
@@ -55,10 +34,5 @@ class HomeCell: UITableViewCell, SettingPurposeDelegate {
 //    }
     
     
-    
-    func settingPurpose(purpose: String) {
-        btnSpeechBubble.setTitle(purpose, for: .normal)
-
-    }
 }
 

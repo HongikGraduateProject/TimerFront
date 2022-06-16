@@ -15,11 +15,9 @@
 		2745AA9D27DC5B95002F8075 /* GroupRoomVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2745AA9B27DC5B95002F8075 /* GroupRoomVC.swift */; };
 		2745AAA227DC6BE5002F8075 /* GroupRoomVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2745AAA127DC6BE5002F8075 /* GroupRoomVC.storyboard */; };
 		2745AAA527DC7159002F8075 /* SettingTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2745AAA427DC7159002F8075 /* SettingTab.swift */; };
-		27489E3927DB71B60091B070 /* SimpleProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27489E3727DB71B60091B070 /* SimpleProfileCell.swift */; };
-		27489E3A27DB71B60091B070 /* SimpleProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27489E3827DB71B60091B070 /* SimpleProfileCell.xib */; };
-		2784154827DB887500F124D2 /* DetailProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2784154627DB887500F124D2 /* DetailProfileCell.swift */; };
-		2784154927DB887500F124D2 /* DetailProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2784154727DB887500F124D2 /* DetailProfileCell.xib */; };
 		2784154E27DC2F9500F124D2 /* TimerTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2784154D27DC2F9500F124D2 /* TimerTab.swift */; };
+		27AC5432285A527900BBD65A /* SetPurpose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AC5431285A527900BBD65A /* SetPurpose.swift */; };
+		27AC5434285A528C00BBD65A /* SetPurpose.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27AC5433285A528C00BBD65A /* SetPurpose.storyboard */; };
 		27BEE4EE27DB3458003077C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BEE4ED27DB3458003077C2 /* AppDelegate.swift */; };
 		27BEE4F027DB3458003077C2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BEE4EF27DB3458003077C2 /* SceneDelegate.swift */; };
 		27BEE4F227DB3458003077C2 /* HomeTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BEE4F127DB3458003077C2 /* HomeTab.swift */; };
@@ -31,6 +29,9 @@
 		27BEE50B27DB49F3003077C2 /* TimerTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27BEE50A27DB49F3003077C2 /* TimerTab.storyboard */; };
 		27BEE50D27DB49FF003077C2 /* GroupTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27BEE50C27DB49FF003077C2 /* GroupTab.storyboard */; };
 		27BEE50F27DB4A16003077C2 /* SettingTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27BEE50E27DB4A16003077C2 /* SettingTab.storyboard */; };
+		27FD0E7C282A5A270095279E /* EditHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FD0E7A282A5A270095279E /* EditHome.swift */; };
+		27FD0E7F282A5A550095279E /* EditHome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27FD0E7E282A5A550095279E /* EditHome.storyboard */; };
+		27FD0E81282A6CC50095279E /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FD0E80282A6CC50095279E /* Store.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,11 +43,9 @@
 		2745AA9B27DC5B95002F8075 /* GroupRoomVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupRoomVC.swift; sourceTree = "<group>"; };
 		2745AAA127DC6BE5002F8075 /* GroupRoomVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GroupRoomVC.storyboard; sourceTree = "<group>"; };
 		2745AAA427DC7159002F8075 /* SettingTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTab.swift; sourceTree = "<group>"; };
-		27489E3727DB71B60091B070 /* SimpleProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleProfileCell.swift; sourceTree = "<group>"; };
-		27489E3827DB71B60091B070 /* SimpleProfileCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SimpleProfileCell.xib; sourceTree = "<group>"; };
-		2784154627DB887500F124D2 /* DetailProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailProfileCell.swift; sourceTree = "<group>"; };
-		2784154727DB887500F124D2 /* DetailProfileCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailProfileCell.xib; sourceTree = "<group>"; };
 		2784154D27DC2F9500F124D2 /* TimerTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerTab.swift; sourceTree = "<group>"; };
+		27AC5431285A527900BBD65A /* SetPurpose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPurpose.swift; sourceTree = "<group>"; };
+		27AC5433285A528C00BBD65A /* SetPurpose.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SetPurpose.storyboard; sourceTree = "<group>"; };
 		27BEE4EA27DB3458003077C2 /* HongikTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HongikTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27BEE4ED27DB3458003077C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27BEE4EF27DB3458003077C2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +59,9 @@
 		27BEE50A27DB49F3003077C2 /* TimerTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TimerTab.storyboard; sourceTree = "<group>"; };
 		27BEE50C27DB49FF003077C2 /* GroupTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GroupTab.storyboard; sourceTree = "<group>"; };
 		27BEE50E27DB4A16003077C2 /* SettingTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingTab.storyboard; sourceTree = "<group>"; };
+		27FD0E7A282A5A270095279E /* EditHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditHome.swift; sourceTree = "<group>"; };
+		27FD0E7E282A5A550095279E /* EditHome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditHome.storyboard; sourceTree = "<group>"; };
+		27FD0E80282A6CC50095279E /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,12 +100,13 @@
 		2784154A27DBAC0300F124D2 /* HomeTab */ = {
 			isa = PBXGroup;
 			children = (
+				27AC5431285A527900BBD65A /* SetPurpose.swift */,
+				27AC5433285A528C00BBD65A /* SetPurpose.storyboard */,
 				27BEE4F127DB3458003077C2 /* HomeTab.swift */,
 				27BEE50827DB49AE003077C2 /* HomeTab.storyboard */,
-				27489E3727DB71B60091B070 /* SimpleProfileCell.swift */,
-				27489E3827DB71B60091B070 /* SimpleProfileCell.xib */,
-				2784154627DB887500F124D2 /* DetailProfileCell.swift */,
-				2784154727DB887500F124D2 /* DetailProfileCell.xib */,
+				27FD0E7A282A5A270095279E /* EditHome.swift */,
+				27FD0E80282A6CC50095279E /* Store.swift */,
+				27FD0E7E282A5A550095279E /* EditHome.storyboard */,
 			);
 			path = HomeTab;
 			sourceTree = "<group>";
@@ -220,15 +223,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				27BEE4FD27DB3459003077C2 /* LaunchScreen.storyboard in Resources */,
-				27489E3A27DB71B60091B070 /* SimpleProfileCell.xib in Resources */,
-				2784154927DB887500F124D2 /* DetailProfileCell.xib in Resources */,
 				27BEE50927DB49AE003077C2 /* HomeTab.storyboard in Resources */,
 				27BEE50D27DB49FF003077C2 /* GroupTab.storyboard in Resources */,
+				27FD0E7F282A5A550095279E /* EditHome.storyboard in Resources */,
 				273E8A512820229300A4EFC4 /* TodoListVC.storyboard in Resources */,
 				27BEE4FA27DB3459003077C2 /* Assets.xcassets in Resources */,
 				2745AAA227DC6BE5002F8075 /* GroupRoomVC.storyboard in Resources */,
 				27BEE4F527DB3458003077C2 /* Main.storyboard in Resources */,
 				27BEE50F27DB4A16003077C2 /* SettingTab.storyboard in Resources */,
+				27AC5434285A528C00BBD65A /* SetPurpose.storyboard in Resources */,
 				27BEE50B27DB49F3003077C2 /* TimerTab.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -246,12 +249,13 @@
 				27BEE4EE27DB3458003077C2 /* AppDelegate.swift in Sources */,
 				27BEE4F027DB3458003077C2 /* SceneDelegate.swift in Sources */,
 				273E8A542820229300A4EFC4 /* TodoData.swift in Sources */,
+				27AC5432285A527900BBD65A /* SetPurpose.swift in Sources */,
 				2745AA8C27DC4E09002F8075 /* GroupTab.swift in Sources */,
+				27FD0E7C282A5A270095279E /* EditHome.swift in Sources */,
 				2745AAA527DC7159002F8075 /* SettingTab.swift in Sources */,
+				27FD0E81282A6CC50095279E /* Store.swift in Sources */,
 				273E8A532820229300A4EFC4 /* TodoCell.swift in Sources */,
 				273E8A522820229300A4EFC4 /* TodoListVC.swift in Sources */,
-				2784154827DB887500F124D2 /* DetailProfileCell.swift in Sources */,
-				27489E3927DB71B60091B070 /* SimpleProfileCell.swift in Sources */,
 				2745AA9D27DC5B95002F8075 /* GroupRoomVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
